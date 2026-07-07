@@ -20,7 +20,8 @@ Add-Type -AssemblyName WindowsBase
 Add-Type -AssemblyName System.Windows.Forms
 
 $script:Language = "ja"
-$script:SaveFolder = ""
+$script:DefaultSaveFolder = Join-Path -Path $env:LOCALAPPDATA -ChildPath "acr\Saved\SaveGames"
+$script:SaveFolder = $script:DefaultSaveFolder
 $script:BackupFolder = ""
 $script:SettingsDirectory = Join-Path -Path $env:APPDATA -ChildPath "ACRSaveBackup"
 $script:SettingsPath = Join-Path -Path $script:SettingsDirectory -ChildPath "settings.json"
@@ -88,7 +89,7 @@ function Load-AppSettings {
         }
     }
     catch {
-        $script:SaveFolder = ""
+        $script:SaveFolder = $script:DefaultSaveFolder
         $script:BackupFolder = ""
     }
 }
