@@ -9,7 +9,7 @@ The original save files are not modified.
 Features
 --------
 - Select the save data folder.
-  Example: C:\Users\User\App Data\Local\acr\Saved\SaveGames
+  Default: %LOCALAPPDATA%\acr\Saved\SaveGames
 - Select the backup destination folder.
 - Create a new timestamped folder each time a backup is run.
   Example: ACR_SaveBackup_20260707_213045
@@ -31,6 +31,7 @@ The selected save data folder and backup destination folder are saved to:
 %APPDATA%\ACRSaveBackup\settings.json
 
 The app reuses these folders on the next launch unless you select different folders.
+If no saved folder setting exists yet, the save data folder starts as %LOCALAPPDATA%\acr\Saved\SaveGames.
 
 Execution Policy
 ----------------
