@@ -7,6 +7,7 @@ Assetto Corsa Rally does not currently provide cloud save backup support, so thi
 ## Features
 
 - Select the save data folder.
+- Default the save data folder to `%LOCALAPPDATA%\acr\Saved\SaveGames` on first launch.
 - Select the backup destination folder.
 - Create a new timestamped backup folder on every run.
 - Copy `.sav` files only, leaving the original save files untouched.
@@ -24,7 +25,7 @@ Assetto Corsa Rally does not currently provide cloud save backup support, so thi
 Example save folder:
 
 ```text
-C:\Users\User\App Data\Local\acr\Saved\SaveGames
+%LOCALAPPDATA%\acr\Saved\SaveGames
 ```
 
 Backup folders are created with names like:
@@ -42,6 +43,7 @@ The selected folders are saved per Windows user in:
 ```
 
 The app reuses those folders on the next launch unless the user selects different folders.
+If no saved folder setting exists yet, the save data folder starts as `%LOCALAPPDATA%\acr\Saved\SaveGames`.
 
 ## Documentation
 
